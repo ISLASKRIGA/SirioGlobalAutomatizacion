@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Sirio · Automatización de Procesos con IA Native</title>
+  <meta name="description" content="Sirio automatiza los procesos de tu empresa con IA Native: agentes inteligentes, integraciones y flujos que trabajan 24/7. Agenda tu diagnóstico gratuito." />
+  <meta name="theme-color" content="#f6f7f9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l2.6 10.8L29 16l-10.4 3.2L16 30l-2.6-10.8L3 16l10.4-3.2z' fill='%231f4fd8'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <!-- NAV: floating island -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Principal">
+      <a href="#top" class="brand" aria-label="Sirio, inicio">
+        <svg class="brand-star" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l2.6 10.8L29 16l-10.4 3.2L16 30l-2.6-10.8L3 16l10.4-3.2z"/></svg>
+        <span>Sirio</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#ia-native">IA Native</a></li>
+        <li><a href="#servicios">Soluciones</a></li>
+        <li><a href="#proceso">Método</a></li>
+        <li><a href="#roi">Calcula tu ahorro</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-sm btn-primary nav-cta">Diagnóstico gratis</a>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <ul>
+      <li><a href="#ia-native">IA Native</a></li>
+      <li><a href="#servicios">Soluciones</a></li>
+      <li><a href="#proceso">Método</a></li>
+      <li><a href="#roi">Calcula tu ahorro</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+      <li><a href="#contacto" class="menu-cta">Agenda tu diagnóstico →</a></li>
+    </ul>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow reveal"><i class="dot"></i> Para dueños y directores de empresa</span>
+          <h1 class="display reveal">
+            Haz crecer tu empresa<br />
+            <em>sin crecer tu nómina.</em>
+          </h1>
+          <p class="lede reveal">
+            Sirio implementa automatización con IA Native en tu operación: agentes inteligentes que procesan facturas, cotizan, atienden clientes y generan reportes las 24 horas. Tú recuperas margen, control y tiempo para dirigir.
+          </p>
+          <div class="hero-ctas reveal">
+            <a href="#contacto" class="btn btn-primary btn-lg">
+              Agenda tu diagnóstico gratuito
+              <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+            <a href="#roi" class="btn btn-ghost btn-lg">Calcula cuánto ahorras</a>
+          </div>
+          <ul class="hero-proof reveal">
+            <li><strong data-count="70" data-suffix="%">0%</strong><span>menos costo operativo en procesos automatizados*</span></li>
+            <li><strong data-count="30" data-suffix=" días">0 días</strong><span>a tu primer flujo en producción</span></li>
+            <li><strong>24/7</strong><span>operación sin pausas</span></li>
+          </ul>
+        </div>
+
+        <!-- Live agent console -->
+        <div class="hero-visual reveal">
+          <div class="bezel theme-dark">
+            <div class="bezel-core console">
+              <div class="console-head">
+                <div class="console-title">
+                  <span class="pulse"></span>
+                  Agente Sirio · <span class="mono">en ejecución</span>
+                </div>
+                <div class="console-meta mono"><span id="tasks-count">1,284</span> tareas hoy</div>
+              </div>
+              <ol class="feed" id="feed" aria-live="off"></ol>
+              <div class="console-foot">
+                <div class="meter">
+                  <span class="meter-label">Horas recuperadas este mes</span>
+                  <span class="meter-value mono" id="hours">312.4 h</span>
+                </div>
+                <div class="bars" aria-hidden="true">
+                  <i style="--h:.35"></i><i style="--h:.5"></i><i style="--h:.42"></i><i style="--h:.62"></i><i style="--h:.58"></i><i style="--h:.76"></i><i style="--h:.7"></i><i style="--h:.88"></i><i style="--h:.82"></i><i style="--h:1"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="float-chip chip-a"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg> Factura conciliada en 1.8 s</div>
+          <div class="float-chip chip-b"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg> +38 leads calificados</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES MARQUEE -->
+    <section class="marquee-sec" aria-label="Industrias">
+      <p class="marquee-label">Procesos que automatizamos en</p>
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>Manufactura</span><span>Retail</span><span>Salud</span><span>Logística</span><span>Despachos contables</span><span>Inmobiliarias</span><span>Seguros</span><span>Educación</span><span>Distribución</span><span>Servicios profesionales</span>
+          <span aria-hidden="true">Manufactura</span><span aria-hidden="true">Retail</span><span aria-hidden="true">Salud</span><span aria-hidden="true">Logística</span><span aria-hidden="true">Despachos contables</span><span aria-hidden="true">Inmobiliarias</span><span aria-hidden="true">Seguros</span><span aria-hidden="true">Educación</span><span aria-hidden="true">Distribución</span><span aria-hidden="true">Servicios profesionales</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section problem">
+      <div class="container narrow center">
+        <span class="eyebrow reveal">El costo invisible</span>
+        <h2 class="h2 reveal">Estás pagando sueldos por tareas que una IA <em>resuelve en segundos.</em></h2>
+        <p class="lede reveal">
+          Capturar datos, revisar correos, perseguir pagos, armar el mismo reporte cada lunes. Son horas que no aparecen como gasto en tu estado de resultados, pero reducen tu margen, frenan tu crecimiento y te mantienen apagando fuegos en lugar de dirigir.
+        </p>
+      </div>
+      <div class="container pain-grid">
+        <article class="pain reveal">
+          <span class="pain-num mono">40%</span>
+          <p>de la jornada de un colaborador administrativo puede irse en tareas repetitivas.</p>
+        </article>
+        <article class="pain reveal">
+          <span class="pain-num mono">1 de 5</span>
+          <p>capturas manuales contiene algún error que alguien tendrá que corregir después.</p>
+        </article>
+        <article class="pain reveal">
+          <span class="pain-num mono">&gt; 12 h</span>
+          <p>tarda en promedio una empresa en responder a un prospecto. Para entonces, ya compró en otro lado.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- IA NATIVE -->
+    <section class="section" id="ia-native">
+      <div class="container split">
+        <div class="split-copy">
+          <span class="eyebrow reveal">Qué significa IA Native</span>
+          <h2 class="h2 reveal">No le agregamos IA a tus procesos. <em>Los rediseñamos desde la IA.</em></h2>
+          <p class="lede reveal">
+            La automatización tradicional sigue reglas rígidas: si algo cambia, se rompe. Una arquitectura IA Native entiende documentos, correos y conversaciones; toma decisiones con contexto y aprende de cada excepción. Por eso automatiza lo que antes parecía imposible de automatizar.
+          </p>
+          <a href="#contacto" class="btn btn-primary reveal">
+            Ver cómo aplica a mi empresa
+            <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+        </div>
+
+        <div class="compare reveal">
+          <div class="bezel">
+            <div class="bezel-core compare-core">
+              <div class="compare-tabs" role="tablist">
+                <div class="compare-tabs-base">
+                  <button role="tab" aria-selected="false" data-tab="0">Automatización tradicional</button>
+                  <button role="tab" aria-selected="true" data-tab="1">IA Native · Sirio</button>
+                </div>
+                <div class="compare-tabs-clip" aria-hidden="true">
+                  <span>Automatización tradicional</span>
+                  <span>IA Native · Sirio</span>
+                </div>
+              </div>
+              <div class="compare-panels">
+                <ul class="compare-list" data-panel="0">
+                  <li class="neg">Solo funciona con datos perfectamente estructurados</li>
+                  <li class="neg">Se rompe cuando cambia un formato o un proveedor</li>
+                  <li class="neg">Cada excepción termina otra vez en manos de una persona</li>
+                  <li class="neg">Meses de configuración y mantenimiento costoso</li>
+                  <li class="neg">No entiende correos, PDFs ni mensajes de clientes</li>
+                </ul>
+                <ul class="compare-list is-active" data-panel="1">
+                  <li class="pos">Lee y entiende PDFs, fotos, correos, audios y WhatsApp</li>
+                  <li class="pos">Se adapta a nuevos formatos sin reprogramar</li>
+                  <li class="pos">Resuelve excepciones con criterio y escala solo lo crítico</li>
+                  <li class="pos">Primer flujo en producción en semanas, no meses</li>
+                  <li class="pos">Mejora con cada interacción y lo puedes medir</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES BENTO -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">Soluciones</span>
+          <h2 class="h2 reveal">Todo lo que tu operación<br /><em>puede dejar de hacer a mano.</em></h2>
+        </div>
+
+        <div class="bento">
+          <article class="card card-xl reveal">
+            <div class="bezel h-full">
+              <div class="bezel-core card-core">
+                <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div>
+                <h3>Agentes de IA para tu operación</h3>
+                <p>Empleados digitales que ejecutan procesos completos de principio a fin: reciben la solicitud, consultan tus sistemas, toman la decisión y dejan todo registrado. Trabajan de noche, en fin de semana y en temporada alta, sin costo extra.</p>
+                <div class="agent-flow" aria-hidden="true">
+                  <span class="node">Correo entrante</span>
+                  <span class="wire"></span>
+                  <span class="node node-ai">Agente Sirio</span>
+                  <span class="wire"></span>
+                  <span class="node">ERP · CRM</span>
+                  <span class="wire"></span>
+                  <span class="node">Respuesta enviada</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="bezel h-full">
+              <div class="bezel-core card-core">
+                <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h4"/></svg></div>
+                <h3>Documentos inteligentes</h3>
+                <p>Facturas, órdenes de compra, contratos y expedientes leídos, validados y capturados automáticamente en tu sistema.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="bezel h-full">
+              <div class="bezel-core card-core">
+                <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg></div>
+                <h3>Atención 24/7 en WhatsApp y web</h3>
+                <p>Responde, cotiza, agenda y califica prospectos en segundos, con el tono de tu marca. Tu equipo solo atiende lo que vale la pena.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-half reveal">
+            <div class="bezel h-full">
+              <div class="bezel-core card-core">
+                <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M8 7h8a4 4 0 010 8h-1M16 17H8a4 4 0 010-8h1"/></svg></div>
+                <h3>Integraciones sin fricción</h3>
+                <p>Conectamos tu ERP, CRM, hojas de cálculo, correo y bancos para que la información fluya sola entre áreas.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-half reveal">
+            <div class="bezel h-full">
+              <div class="bezel-core card-core">
+                <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+                <h3>Reportes que se hacen solos</h3>
+                <p>Indicadores actualizados en tiempo real y resúmenes ejecutivos redactados por IA, directo a tu correo cada mañana.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-wide reveal">
+            <div class="bezel h-full">
+              <div class="bezel-core card-core card-row">
+                <div>
+                  <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                  <h3>Seguridad y control de nivel empresarial</h3>
+                  <p>Tus datos no entrenan modelos públicos. Permisos por rol, bitácora de cada acción y supervisión humana en los puntos que tú definas.</p>
+                </div>
+                <ul class="tags">
+                  <li>Cifrado de extremo a extremo</li>
+                  <li>Aprobaciones humanas</li>
+                  <li>Bitácora auditable</li>
+                  <li>Cumplimiento LFPDPPP</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="proceso">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">Método Sirio</span>
+          <h2 class="h2 reveal">De la idea a resultados medibles<br /><em>en 30 días.</em></h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-n mono">01</span>
+            <h3>Diagnóstico</h3>
+            <p>Mapeamos tus procesos y detectamos dónde la IA genera el mayor retorno. Sin costo y sin compromiso.</p>
+            <span class="step-time mono">Semana 1</span>
+          </li>
+          <li class="step reveal">
+            <span class="step-n mono">02</span>
+            <h3>Diseño</h3>
+            <p>Definimos el flujo, las reglas de negocio y los puntos de control humano junto con tu equipo.</p>
+            <span class="step-time mono">Semana 2</span>
+          </li>
+          <li class="step reveal">
+            <span class="step-n mono">03</span>
+            <h3>Implementación</h3>
+            <p>Construimos, integramos y probamos con tus datos reales. Lanzamos en paralelo para que nada se detenga.</p>
+            <span class="step-time mono">Semanas 3 y 4</span>
+          </li>
+          <li class="step reveal">
+            <span class="step-n mono">04</span>
+            <h3>Optimización</h3>
+            <p>Medimos ahorro, tiempos y errores cada mes. Escalamos a nuevos procesos cuando los números lo justifican.</p>
+            <span class="step-time mono">Continuo</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ROI -->
+    <section class="section" id="roi">
+      <div class="container roi-grid">
+        <div>
+          <span class="eyebrow reveal">Calculadora de ahorro</span>
+          <h2 class="h2 reveal">¿Cuánto te está costando <em>no automatizar?</em></h2>
+          <p class="lede reveal">Mueve los valores con los datos de tu empresa. El cálculo asume que Sirio automatiza el 70% de las tareas repetitivas, un escenario típico en procesos administrativos.</p>
+        </div>
+
+        <div class="bezel reveal">
+          <div class="bezel-core roi-core">
+            <label class="field">
+              <span class="field-top"><span>Personas en tareas operativas</span><output id="o-people" class="mono">8</output></span>
+              <input type="range" id="people" min="1" max="100" value="8" />
+            </label>
+            <label class="field">
+              <span class="field-top"><span>Horas por semana en tareas repetitivas (por persona)</span><output id="o-hours" class="mono">15 h</output></span>
+              <input type="range" id="hours-in" min="1" max="40" value="15" />
+            </label>
+            <label class="field">
+              <span class="field-top"><span>Costo por hora (MXN, con prestaciones)</span><output id="o-cost" class="mono">$180</output></span>
+              <input type="range" id="cost" min="60" max="800" step="10" value="180" />
+            </label>
+
+            <div class="roi-result">
+              <div>
+                <span class="roi-label">Ahorro anual estimado</span>
+                <span class="roi-big mono" id="r-money">$0</span>
+              </div>
+              <div class="roi-side">
+                <div><span class="roi-label">Horas liberadas al año</span><span class="roi-mid mono" id="r-hours">0</span></div>
+                <div><span class="roi-label">Equivale a</span><span class="roi-mid mono" id="r-fte">0 personas</span></div>
+              </div>
+            </div>
+            <a href="#contacto" class="btn btn-primary btn-block">
+              Quiero recuperar ese dinero
+              <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow reveal">Por qué Sirio</span>
+          <h2 class="h2 reveal">Sirio es la estrella más brillante del cielo nocturno.<br /><em>Queremos que tu operación brille igual.</em></h2>
+        </div>
+        <div class="why">
+          <div class="why-item reveal">
+            <h3>Pagas por resultados, no por horas</h3>
+            <p>Cada proyecto arranca con un objetivo medible: horas ahorradas, errores eliminados o ventas recuperadas.</p>
+          </div>
+          <div class="why-item reveal">
+            <h3>Sin reemplazar tus sistemas</h3>
+            <p>Trabajamos encima de lo que ya usas. Nada de migraciones largas ni curvas de aprendizaje para tu equipo.</p>
+          </div>
+          <div class="why-item reveal">
+            <h3>Tú vuelves a dirigir</h3>
+            <p>Indicadores claros cada mañana y una operación que no depende de que estés encima. Tu equipo se enfoca en clientes y crecimiento.</p>
+          </div>
+          <div class="why-item reveal">
+            <h3>Acompañamiento real</h3>
+            <p>Un equipo dedicado que monitorea, ajusta y te reporta resultados cada mes. No te dejamos solo con una herramienta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container narrow">
+        <div class="section-head center">
+          <span class="eyebrow reveal">Preguntas frecuentes</span>
+          <h2 class="h2 reveal">Lo que nos preguntan <em>antes de empezar.</em></h2>
+        </div>
+        <div class="faq">
+          <details class="reveal">
+            <summary>¿Necesito tener un equipo técnico o de sistemas?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>No. Nosotros diseñamos, construimos y mantenemos todo. Solo necesitamos a alguien de tu equipo que conozca el proceso para validar que el resultado sea el correcto.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>¿La IA va a reemplazar a mis colaboradores?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>La IA reemplaza tareas, no personas. Las empresas con las que trabajamos reasignan ese tiempo a ventas, servicio y mejora continua, donde su gente aporta mucho más valor.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>¿Qué pasa con la confidencialidad de mi información?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Tus datos se procesan en entornos cifrados, con acceso por roles y bitácora de cada acción. No se usan para entrenar modelos públicos y firmamos acuerdos de confidencialidad desde el diagnóstico.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>¿Cuánto cuesta?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Depende del proceso y del volumen. En el diagnóstico gratuito te entregamos una propuesta con inversión, tiempos y retorno esperado, para que decidas con números en la mano.</p></div>
+          </details>
+          <details class="reveal">
+            <summary>¿Funciona con los sistemas que ya uso?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Sí. Nos integramos con ERPs, CRMs, correo, WhatsApp, hojas de cálculo, portales bancarios y sistemas propios mediante API o automatización de interfaz.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="bezel cta-bezel theme-dark reveal">
+          <div class="bezel-core cta-core">
+            <div class="cta-copy">
+              <span class="eyebrow"><i class="dot"></i> Cupo limitado: 4 diagnósticos por mes</span>
+              <h2 class="h2">En 45 minutos te mostramos cuánto dinero <em>puede ahorrar tu empresa.</em></h2>
+              <ul class="checks">
+                <li>Mapa de los procesos con mayor retorno</li>
+                <li>Estimación de ahorro anual en pesos</li>
+                <li>Hoja de ruta de implementación</li>
+                <li>Sin costo y sin compromiso</li>
+              </ul>
+            </div>
+            <form class="form" id="lead-form" novalidate>
+              <label class="input"><span>Nombre y cargo</span><input name="nombre" type="text" autocomplete="name" required placeholder="Ej. Laura Méndez, Directora General" /></label>
+              <label class="input"><span>Empresa</span><input name="empresa" type="text" autocomplete="organization" required placeholder="Nombre de tu empresa" /></label>
+              <label class="input"><span>Tamaño de la empresa</span>
+                <select name="tamano" required>
+                  <option value="" disabled selected>Número de colaboradores</option>
+                  <option>1 a 10</option>
+                  <option>11 a 50</option>
+                  <option>51 a 250</option>
+                  <option>Más de 250</option>
+                </select>
+              </label>
+              <label class="input"><span>Correo de trabajo</span><input name="correo" type="email" autocomplete="email" required placeholder="tu@empresa.com" /></label>
+              <label class="input"><span>¿Qué proceso te quita más tiempo?</span>
+                <select name="proceso" required>
+                  <option value="" disabled selected>Selecciona una opción</option>
+                  <option>Facturación y cuentas por pagar/cobrar</option>
+                  <option>Atención a clientes y ventas</option>
+                  <option>Captura de documentos</option>
+                  <option>Reportes y análisis</option>
+                  <option>Inventarios y compras</option>
+                  <option>Otro</option>
+                </select>
+              </label>
+              <button type="submit" class="btn btn-primary btn-block btn-lg">
+                <span class="btn-label">Agendar mi diagnóstico gratuito</span>
+                <span class="btn-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+              </button>
+              <p class="form-note">Te respondemos en menos de 24 horas hábiles.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand">
+          <svg class="brand-star" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l2.6 10.8L29 16l-10.4 3.2L16 30l-2.6-10.8L3 16l10.4-3.2z"/></svg>
+          <span>Sirio</span>
+        </a>
+        <p class="footer-tag">Automatización de procesos con IA Native para negocios y empresas.</p>
+      </div>
+      <nav class="footer-links" aria-label="Pie de página">
+        <a href="#ia-native">IA Native</a>
+        <a href="#servicios">Soluciones</a>
+        <a href="#proceso">Método</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <div class="container footer-base">
+      <span>© <span id="year"></span> Sirio Automatización de Procesos</span>
+      <span>*Cifras de referencia; los resultados varían según cada proceso.</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
